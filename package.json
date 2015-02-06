@@ -1,0 +1,26 @@
+{
+  "name": "gulp-tsreflect",
+  "version": "1.0.0",
+  "description": "Gulp plugin for the tsreflect-compiler.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rogierschouten/gulp-tsreflect.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "tsreflect",
+    "tsreflect-compiler",
+    "typescript",
+    "gulpplugin"
+  ],
+  "author": {
+    "name": "Rogier Schouten",
+    "email": "r.schouten@spiritit.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "~2.2.14",
+    "through2": "^0.6.3",
+    "tsreflect-compiler": "^0.1.1"
+  }
+}
