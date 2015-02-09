@@ -1,4 +1,4 @@
-# Gulp-TsReflect
+# gulp-tsreflect
 
 [![NPM version](https://badge.fury.io/js/gulp-tsreflect.svg)](http://badge.fury.io/js/gulp-tsreflect)
 
@@ -7,11 +7,11 @@
 
 ## Synopsis
 
-Gulp plugin to execute the tsreflect-compiler  (https://github.com/artifacthealth/tsreflect-compiler)
+Gulp plugin to use the tsreflect-compiler  (https://github.com/artifacthealth/tsreflect-compiler)
 
 ## Installation
 
-You do not need to install tsreflect-compiler separately, just install gulp-tsreflect:
+You do NOT need to install tsreflect-compiler separately.
 
 ```shell
 npm install --save-dev gulp-tsreflect
@@ -37,6 +37,9 @@ gulp.task("tsreflect", function() {
 
 ## Changelog
 
+### 2.0.2
+Typo in README.md
+
 ### 2.0.1
 Remove unused package from package.json.
 
@@ -44,7 +47,7 @@ Remove unused package from package.json.
 Interface change, which was made possible by tsreflect-compiler@0.1.3: the output files are now written to the stream instead of to disk. This makes proper Gulp builds possible.
 
 ### 1.0.0
-Initial veresion
+Initial version
 
 ## License
 
