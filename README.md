@@ -37,6 +37,9 @@ gulp.task("tsreflect", function() {
 
 ## Changelog
 
+### 2.0.1
+Remove unused package from package.json.
+
 ### 2.0.0
 Interface change, which was made possible by tsreflect-compiler@0.1.3: the output files are now written to the stream instead of to disk. This makes proper Gulp builds possible.
 
