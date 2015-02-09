@@ -1,6 +1,6 @@
 {
   "name": "gulp-tsreflect",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Gulp plugin for the tsreflect-compiler.",
   "repository": {
     "type": "git",

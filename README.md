@@ -1,4 +1,4 @@
-# Gulp-TypeDoc
+# Gulp-TsReflect
 
 [![NPM version](https://badge.fury.io/js/gulp-tsreflect.svg)](http://badge.fury.io/js/gulp-tsreflect)
 
