@@ -22,11 +22,17 @@ function plugin(options) {
 	return through.obj(function(file, enc, cb) {
 		var me = this;
 		if (file.isNull()) {
-			// return empty file
-			return cb(null, file);
+			// return empty file, replace extension by .json
+			var jsonFile = new File({
+				cwd: file.cwd,
+				base: file.base,
+				path: path.join(path.dirname(file.path), path.basename(file.path, path.extname(file.path)) + ".json"),
+				contents: new Buffer("{}", "utf8")
+			});
+			me.push(jsonFile);
 		}
 		if (file.isStream()) {
-			me.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
+			me.emit("error", new PluginError(PLUGIN_NAME, "Streams are not supported!"));
 			return cb();
 		}
 
@@ -52,7 +58,7 @@ function plugin(options) {
 					if (onError) {
 						onError(e.message);
 					}
-					text = "";
+					return undefined;
 				}
 				return text;
 			},
@@ -102,7 +108,7 @@ function plugin(options) {
 		if (errors !== "") {
 			me.emit(new gutil.PluginError(PLUGIN_NAME, errors));
 		}
-		
+
 		// all done
 		cb();
 	});

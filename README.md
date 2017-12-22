@@ -37,6 +37,11 @@ gulp.task("tsreflect", function() {
 
 ## Changelog
 
+### 2.0.3
+
+* Update dependencies
+* Bugfix for empty files - output json and not js
+
 ### 2.0.2
 Typo in README.md
 
