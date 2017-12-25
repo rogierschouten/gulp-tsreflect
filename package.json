@@ -1,6 +1,6 @@
 {
   "name": "gulp-tsreflect",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Gulp plugin for the tsreflect-compiler.",
   "repository": {
     "type": "git",
@@ -15,11 +15,11 @@
   ],
   "author": {
     "name": "Rogier Schouten",
-    "email": "r.schouten@spiritit.com"
+    "email": "github@workingcode.ninja"
   },
   "license": "MIT",
   "dependencies": {
-    "gulp-util": "^3.0.8",
+    "plugin-error": "^0.1.2",
     "through2": "^2.0.3",
     "tsreflect-compiler": "^0.1.10",
     "vinyl": "^2.1.0"

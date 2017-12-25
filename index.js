@@ -7,9 +7,8 @@ var util = require("util");
 
 var compiler = require("tsreflect-compiler");
 var File = require("vinyl");
-var gutil = require("gulp-util");
-var PluginError = gutil.PluginError;
 var through = require("through2");
+const PluginError = require("plugin-error");
 
 const PLUGIN_NAME = "gulp-tsreflect";
 
@@ -86,7 +85,7 @@ function plugin(options) {
 			var diagnostics = compiler.compile([file.path], opts, compilerHost);
 		} catch (e) {
 			console.log(e.stack);
-			me.emit(new gutil.PluginError(PLUGIN_NAME, e));
+			me.emit(new PluginError(PLUGIN_NAME, e));
 			return cb(e);
 		}
 
@@ -106,7 +105,7 @@ function plugin(options) {
 			}
 		}
 		if (errors !== "") {
-			me.emit(new gutil.PluginError(PLUGIN_NAME, errors));
+			me.emit(new PluginError(PLUGIN_NAME, errors));
 		}
 
 		// all done
