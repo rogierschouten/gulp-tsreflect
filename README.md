@@ -37,6 +37,10 @@ gulp.task("tsreflect", function() {
 
 ## Changelog
 
+### 2.0.5
+
+* Fix vulnerable dependencies
+
 ### 2.0.4
 
 * Remove deprecated gulp-util dependency
